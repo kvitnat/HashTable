@@ -1,5 +1,7 @@
 cmake-build-debug
 .idea/workspace.xml
-
-
-
+texts/aliceWrongWords.txt
+texts/draculaWrongWords.txt
+texts/holmesWrongWords.txt
+texts/sherlockWrongWords.txt
+texts/tolstoyWrongWords.txt
