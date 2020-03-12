@@ -3,4 +3,4 @@ project(HashTable)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(HashTable main.cpp)
+add_executable(HashTable main.cpp Tree.h Checker.cpp VectorChecker.cpp)
