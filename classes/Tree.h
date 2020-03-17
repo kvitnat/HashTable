@@ -79,4 +79,21 @@ public:
             delete node;
         }
     }
+
+    bool check(T x)
+    {
+        return subcheck(root, x);
+    }
+
+    bool subcheck(Node* node, T x)
+    {
+        if(node == nullptr)
+            return false;
+        if (x == node->value)
+            return true;
+        if (x < node->value)
+            return subcheck(node->left, x);
+        else
+            return subcheck(node->right, x);
+    }
 };

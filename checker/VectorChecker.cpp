@@ -5,16 +5,18 @@
 #include "VectorChecker.h"
 
 VectorChecker::VectorChecker() = default;
-//VectorChecker::~VectorChecker() = default;
+VectorChecker::~VectorChecker() = default;
 
 void VectorChecker::add(std::string word)
 {
-    if(!word.empty())
-        dictionary.push_back(word);
+    dictionary.push_back(word);
 }
 
 bool VectorChecker::check(std::string word)
 {
+    fixWord(word);
+    if(word.empty())
+        return true;
     long N1 = 0;
     long N2 = dictionary.size() - 1;
 
@@ -29,3 +31,4 @@ bool VectorChecker::check(std::string word)
     }
     return false;
 }
+
